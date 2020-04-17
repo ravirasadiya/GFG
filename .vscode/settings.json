@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/.exe": true
+    },
+    "files.watcherExclude": {
+        "**/.exe": true
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
