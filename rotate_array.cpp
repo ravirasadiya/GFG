@@ -1,10 +1,9 @@
 #include <iostream>
-#include<algorithm> 
-#include <vector>
+#include <array>
 using namespace std;
 
 void rotate(vector<int>& nums, int k) {
-        k = nums.size() - k - 1;
+        k %=nums.size();
         reverse(nums.begin(), nums.end());
         reverse(nums.begin(), nums.begin()+k);
         reverse(nums.begin()+k, nums.end());
@@ -17,16 +16,12 @@ int main() {
 	while(T>0) {
 	    int n,d;
 	    cin >> n >> d;
-	    vector<int> v;
+	    int a[n];
 	    for(int i =0 ;i <n;i++) {
-            int value;
-	        cin >> value;
-            v.push_back(value);
+	        cin >> a[i];
 	    }
-	    rotate(v,d-1);
-	    for(int j = 0 ; j < n ; j++) {
-            cout << v[j] << " ";
-        }
+	    leftrotateArray(a, n, d);
+	    printarray(a, n);
 	    cout << endl;
 	    T--;
 	}
