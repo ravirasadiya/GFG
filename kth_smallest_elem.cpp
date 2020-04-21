@@ -43,8 +43,21 @@ int partition(int arr[], int l, int r) {
 // Driver program to test above methods 
 int main() 
 { 
-    int arr[] = {17,37,14,46,52,88,97,7,3,45,49,77,66,11,33,22,87}; 
-    int n = sizeof(arr) / sizeof(arr[0]), k = 7; 
-    cout << "K'th smallest element is " << kthSmallest(arr, 0, n - 1, k); 
+    int t;
+    cin >> t;
+    while(t> 0) {
+        int n;
+        cin >> n;
+        int arr[n];
+        for(int i =0 ;i < n ;i++) {
+            cin >> arr[i];
+        }
+        int k;
+        cin >>k;
+        cout << kthSmallest(arr, 0, n - 1, k); 
+        t--;
+    }
+    
+    
     return 0; 
 } 
